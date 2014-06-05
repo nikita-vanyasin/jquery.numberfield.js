@@ -23,7 +23,7 @@
             options = {};
         }
         var defaultOptions = {ints: 2, floats: 6, separator: "."};
-        options = $.extend( options, defaultOptions );
+        options = $.extend( defaultOptions, options );
         var intNumAllow = options.ints;
         var floatNumAllow = options.floats;
         var separator = options.separator;
