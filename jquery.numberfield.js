@@ -37,7 +37,9 @@
                     return false;
                 }
             }
-            this.value = this.value.replace( /[^0-9.]/g, '' );
+		    var re = new RegExp('[^0-9' + options.separator + ']', 'g');
+            this.value = this.value.replace(re, '');
+			
             var allowedLength;
             var iof = this.value.indexOf( separator );
             if ( (iof != -1) && (this.value.substring( 0, iof ).length > intNumAllow) )
